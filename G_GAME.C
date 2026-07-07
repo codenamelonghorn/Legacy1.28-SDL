@@ -1087,9 +1087,8 @@ void G_PlayerFinishLevel (int player)
 
 
 // added 2-2-98 for hacking with dehacked patch
-//SOM: Sonic starts with one health
-int initial_health=1; //MAXHEALTH;
-int initial_bullets=0; // Tails 10-24-99
+int initial_health=100; //MAXHEALTH;
+int initial_bullets=50;
 
 void VerifFavoritWeapon (player_t *player);
 
