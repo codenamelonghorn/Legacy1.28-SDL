@@ -38,7 +38,7 @@ char *text[] = {
    "Picked up a stimpack.",
    "Picked up a medikit that you REALLY need!",
    "Picked up a medikit.",
-   "You found a chaos emerald!", // Changed by Tails: 9-14-99
+   "Supercharge!",
 
    "Picked up a blue keycard.",
    "Picked up a yellow keycard.",
@@ -47,7 +47,7 @@ char *text[] = {
    "Picked up a yellow skull key.",
    "Picked up a red skull key.",
 
-   "Invincibility!", // Changed by Tails: 9-14-99
+   "Invulnerability!",
    "Berserk!",
    "Partial Invisibility",
    "Radiation Shielding Suit",
@@ -122,41 +122,77 @@ char *text[] = {
    "E4M7: And Hell Followed",
    "E4M8: Unto The Cruel",
    "E4M9: Fear",
-   "Greenflower Zone Act 1", // Changed by Tails: 9-14-99
-   "Greenflower Zone Act 2", // Changed by Tails: 9-14-99
-   "Greenflower Zone Act 3", // Changed by Tails: 9-14-99
-   "Techno Hill Zone Act 1", // Changed by Tails: 9-14-99
-   "Techno Hill Zone Act 2", // Changed by Tails: 9-14-99
-   "Techno Hill Zone Act 3", // Changed by Tails: 9-14-99
-   "Deep Sea Zone Act 1", // Changed by Tails: 9-14-99
-   "Deep Sea Zone Act 2", // Changed by Tails: 9-14-99
-   "Deep Sea Zone Act 3", // Changed by Tails: 9-14-99
-   "Mine Maze Zone Act 1", // Changed by Tails: 9-14-99
-   "Mine Maze Zone Act 2", // Changed by Tails: 9-14-99
+   "level 1: entryway",
+   "level 2: underhalls",
+   "level 3: the gantlet",
+   "level 4: the focus",
+   "level 5: the waste tunnels",
+   "level 6: the crusher",
+   "level 7: dead simple",
+   "level 8: tricks and traps",
+   "level 9: the pit",
+   "level 10: refueling base",
+   "level 11: 'o' of destruction!",
 
-   "Mine Maze Zone Act 3", // Changed by Tails: 9-14-99
-   "Rocky Mountain Zone Act 1", // Changed by Tails: 9-14-99
-   "Rocky Mountain Zone Act 2", // Changed by Tails: 9-14-99
-   "Rocky Mountain Zone Act 3", // Changed by Tails: 9-14-99
-   "Red Volcano Zone Act 1", // Changed by Tails: 9-14-99
-   "Red Volcano Zone Act 2", // Changed by Tails: 9-14-99
-   "Red Volcano Zone Act 3", // Changed by Tails: 9-14-99
-   "Dark City Zone Act 1", // Changed by Tails: 9-14-99
-   "Dark City Zone Act 2", // Changed by Tails: 9-14-99
+   "level 12: the factory",
+   "level 13: downtown",
+   "level 14: the inmost dens",
+   "level 15: industrial zone",
+   "level 16: suburbs",
+   "level 17: tenements",
+   "level 18: the courtyard",
+   "level 19: the citadel",
+   "level 20: gotcha!",
 
-   "Dark City Zone Act 3", // Changed by Tails: 9-14-99
-   "Doomship Zone Act 1", // Changed by Tails: 9-14-99
-   "Doomship Zone Act 2", // Changed by Tails: 9-14-99
-   "Doomship Zone Act 3", // Changed by Tails: 9-14-99
-   "Robotnirock Zone Act 1", // Changed by Tails: 9-14-99
-   "Robotnirock Zone Act 2", // Changed by Tails: 9-14-99
-   "Robotnirock Zone Act 3", // Changed by Tails: 9-14-99
-   "The Final Fight Zone!", // Changed by Tails: 9-14-99
-   "Wood Zone", // Changed by Tails: 9-14-99
-   "Dust Hill Zone", // Changed by Tails: 9-14-99
+   "level 21: nirvana",
+   "level 22: the catacombs",
+   "level 23: barrels o' fun",
+   "level 24: the chasm",
+   "level 25: bloodfalls",
+   "level 26: the abandoned mines",
+   "level 27: monster condo",
+   "level 28: the spirit world",
+   "level 29: the living end",
+   "level 30: icon of sin",
 
-   "Speed Highway at Dawn", // Changed by Tails: 9-14-99
-   "Hidden Palace Zone", // Changed by Tails: 9-14-99
+   "level 31: wolfenstein",
+   "level 32: grosse",
+
+   "level 1: congo",
+   "level 2: well of souls",
+   "level 3: aztec",
+   "level 4: caged",
+   "level 5: ghost town",
+   "level 6: baron's lair",
+   "level 7: caughtyard",
+   "level 8: realm",
+   "level 9: abattoire",
+   "level 10: onslaught",
+   "level 11: hunted",
+
+   "level 12: speed",
+   "level 13: the crypt",
+   "level 14: genesis",
+   "level 15: the twilight",
+   "level 16: the omen",
+   "level 17: compound",
+   "level 18: neurosphere",
+   "level 19: nme",
+   "level 20: the death domain",
+
+   "level 21: slayer",
+   "level 22: impossible mission",
+   "level 23: tombstone",
+   "level 24: the final frontier",
+   "level 25: the temple of darkness",
+   "level 26: bunker",
+   "level 27: anti-christ",
+   "level 28: the sewers",
+   "level 29: odyssey of noises",
+   "level 30: the gateway of hell",
+
+   "level 31: cyberden",
+   "level 32: go 2 it",
 
    "level 1: congo",
    "level 2: well of souls",
@@ -229,12 +265,12 @@ char *text[] = {
 
    "level 31: pharaoh",
    "level 32: caribbean",
-   "I'm ready to kick ro-butt!", // Changed by Tails: 9-14-99
+   "I'm ready to kick butt!",
    "I'm OK.",
    "I'm not looking too good!",
    "Help!",
-   "You stink!", // Changed by Tails: 9-14-99
-   "Next time I'll win!", // Changed by Tails: 9-14-99
+   "You suck!",
+   "Next time, scumbag...",
    "Come here!",
    "I'll take care of it.",
    "Yes",
@@ -256,7 +292,7 @@ char *text[] = {
    "All Marks Cleared",
 
    "Music Change",
-   "IMPOSSIBLE SELECTION, you stupid-head!", // Changed by Tails: 9-14-99
+   "IMPOSSIBLE SELECTION",
    "Degreelessness Mode On",
    "Degreelessness Mode Off",
 
@@ -473,17 +509,17 @@ char *text[] = {
    "As you step off the transport, you hear\n"\
    "the stomp of a cyberdemon's iron shoe.",
 
-   "CRAWLA", // Changed by Tails: 9-14-99
-   "SUPER CRAWLA", // Changed by Tails: 9-14-99
-   "MINI B-EGGMAN", // Changed by Tails: 9-14-99
-   "MINVS", // Changed by Tails: 9-14-99
-   "DRILLAKILLA", // Changed by Tails: 9-14-99
-   "ROCKBOT", // Changed by Tails: 9-14-99
+   "ZOMBIEMAN",
+   "SHOTGUN GUY",
+   "HEAVY WEAPON DUDE",
+   "IMP",
+   "DEMON",
+   "LOST SOUL",
    "CACODEMON",
    "HELL KNIGHT",
    "BARON OF HELL",
    "ARACHNOTRON",
-   "DETON", // Changed by Tails: 9-14-99
+   "PAIN ELEMENTAL",
    "REVENANT",
    "MANCUBUS",
    "ARCH-VILE",
@@ -492,23 +528,23 @@ char *text[] = {
    "OUR HERO",
 
   // DOOM1
-  "Eggman's tied explosives\nto your girlfriend, and\nwill activate them if\nyou press the 'Y' key!\nPress 'N' to save her!", // Changed by Tails: 9-14-99
-  "What would Tails say if\nhe saw you quitting the game?", // Changed by Tails: 9-14-99
-  "Hey!\nWhere do ya think you're goin'?", // Changed by Tails: 9-14-99
-  "Forget your studies!\nPlay some more!", // Changed by Tails: 9-14-99
-  "You're trying to say you\nlike Sonic Adventure better than\nthis, right?", // Changed by Tails: 9-14-99
-  "don't leave yet -- there's a\nsuper emerald around that corner!", // Changed by Tails: 9-14-99
-  "You'd rather work than play?", // Changed by Tails: 9-14-99
-  "go ahead and leave. see if i care...\n*sniffle*", // Changed by Tails: 9-14-99
+  "are you sure you want to\nquit this great game?",
+  "please don't leave, there's more\ndemons to toast!",
+  "let's beat it -- this is turning\ninto a bloodbath!",
+  "i wouldn't leave if i were you.\ndos is much worse.",
+  "you're trying to say you like dos\nbetter than me, right?",
+  "don't leave yet -- there's a\ndemon around that corner!",
+  "ya know, next time you come in here\ni'm gonna toast ya.",
+  "go ahead and leave. see if i care.",
 
   // QuitDOOM II messages
-  "If you leave now,\nEggman will take over the world!", // Changed by Tails: 9-14-99
-  "Don't quit!\nThere are animals\nto save!", // Changed by Tails: 9-14-99
-  "Aw c'mon, just bop\na few more robots!", // Changed by Tails: 9-14-99
-  "Just because you can't\nget that Chaos Emerald...", // Changed by Tails: 9-14-99
-  "If you leave, i'll use\nmy spin attack on you!", // Changed by Tails: 9-14-99
-  "Don't go!\nYou might find the hidden\nlevels!", // Changed by Tails: 9-14-99
-  "Hit the 'N' key sonic!\nThe 'N' key!", // Changed by Tails: 9-14-99
+  "you want to quit?\nthen, thou hast lost an eighth!",
+  "don't go now, there's a \ndimensional shambler waiting\nat the dos prompt!",
+  "get outta here and go back\nto your boring programs.",
+  "if i were your boss, i'd \n deathmatch ya in a minute!",
+  "look, bud. you leave now\nand you forfeit your body count!",
+  "just leave. when you come\nback, i'll be waiting with a bat.",
+  "you're lucky i don't smack\nyou for thinking about leaving.",
 
   "FLOOR4_8",
   "SFLR6_1",
@@ -526,20 +562,20 @@ char *text[] = {
   "VICTORY2",
   "ENDPIC",
 
-  "===========================================================================\n"
-  "                       Sonic Robo Blast II!\n"                                  // Changed by Tails: 9-14-99
-  "                       by Sonic Team Junior\n"                                  // Changed by Tails: 9-14-99
-  "                      http://stjr.segasonic.net\n"                              // Changed by Tails: 9-14-99
-  "      This is a modified version. Go to our site for the original.\n"           // Changed by Tails: 9-14-99
+  "===========================================================================\n" \
+  "ATTENTION:  This version of DOOM has been modified.  If you would like to\n"   \
+  "get a copy of the original game, call 1-800-IDGAMES or see the readme file.\n" \
+  "        You will not receive technical support for modified games.\n"          \
+  "                      press enter to continue\n"                               \
   "===========================================================================\n",
 
   "===========================================================================\n" \
   "                                Shareware!\n"                                  \
   "===========================================================================\n",
 
-  "===========================================================================\n"
-  "                   We hope you enjoy this game as\n"                            // Changed by Tails: 9-14-99
-  "                     much as we did making it!\n"                               // Changed by Tails: 9-14-99
+  "===========================================================================\n" \
+  "                            Do not distribute!\n"                              \
+  "         Please report software piracy to the SPA: 1-800-388-PIR8\n"           \
   "===========================================================================\n",
 
   "Austin Virtual Gaming: Levels will end after 20 minutes\n",
@@ -568,7 +604,7 @@ char *text[] = {
   "c:\\doomdata\\"SAVEGAMENAME"%d.dsg",
   SAVEGAMENAME"%d.dsg",
 
-  "Sonic Robo Blast 2: V1.0", // Changed by Tails: 9-14-99
+  "DOOM 2: Hell on Earth",
   "The Ultimate DOOM Startup",
   "DOOM Registered Startup",
   "DOOM Shareware Startup"
