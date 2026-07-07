@@ -150,7 +150,7 @@ short     skullAnimCounter;             // skull animation counter
 short     whichSkull;                   // which skull to draw
 
 // graphic name of skulls
-char      skullName[8][9] = {"M_SKULL1","M_SKULL2","M_SKULL3","M_SKULL4","M_SKULL5","M_SKULL6","M_SKULL7","M_SKULL8"}; // Tails 9-24-99 Future anims?
+char      skullName[2][9] = {"M_SKULL1","M_SKULL2"};
 
 //
 // PROTOTYPES
@@ -1411,7 +1411,7 @@ static modedesc_t   modedescs[MAXMODEDESCS];
 
 
 //
-// Draw the video modes list, …-la-Quake
+// Draw the video modes list, ï¿½-la-Quake
 //
 void M_DrawVideoMode(void)
 {
@@ -2123,7 +2123,7 @@ void M_DrawTextBox (int x, int y, int width, int lines)
         //cy += 8;
         //V_DrawScaledPatch (cx, cy, 0, p);
 
-        //p = W_CachePatchName ("brdr_mm",PU_CACHE); //middle ombr‚ dessus
+        //p = W_CachePatchName ("brdr_mm",PU_CACHE); //middle ombrï¿½ dessus
         //for (n = 1; n < lines; n++)
         //{
         //    cy += 8;

@@ -7,7 +7,6 @@
 #include "p_local.h"
 #include "r_main.h"
 #include "p_maputl.h"
-mobj_t* blockthing; // Tails 9-15-99 Spin Attack
 
 //
 // P_AproxDistance
@@ -476,7 +475,6 @@ boolean P_BlockThingsIterator ( int                   x,
                                 boolean(*func)(mobj_t*) )
 {
     mobj_t*             mobj;
-    blockthing = NULL; // Tails 9-15-99 Spin Attack
 
     if ( x<0
          || y<0
@@ -493,10 +491,7 @@ boolean P_BlockThingsIterator ( int                   x,
          mobj = mobj->bnext)
     {
         if (!func( mobj ) )
-             { // Tails 9-15-99 Spin Attack
-             blockthing = mobj; // Tails 9-15-99 Spin Attack
-             return false;
-    }
+            return false;
     }
     return true;
 }

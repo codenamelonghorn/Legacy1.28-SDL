@@ -44,7 +44,6 @@ line_t*         ceilingline;
 // set by PIT_CheckLine() for any line that stopped the PIT_CheckLine()
 // that is, for any line which is 'solid'
 line_t*         blockingline;
-extern mobj_t*  blockthing; // Tails 9-15-99 Spin Attack
 
 // keep track of special lines as they are hit,
 // but don't process them until the move is proven valid
@@ -471,22 +470,8 @@ boolean P_CheckPosition ( mobj_t*       thing,
 
     for (bx=xl ; bx<=xh ; bx++)
         for (by=yl ; by<=yh ; by++)
-             // Tails 9-15-99 Spin Attack
-             // SOM: Begin jumping damage code
-             if (!P_BlockThingsIterator(bx, by, PIT_CheckThing)) 
-                 {
-                 if(thing->player && thing->eflags & MF_JUMPED) 
-                     P_DamageMobj(blockthing, NULL, NULL,1); 
-                 if(thing->player && !(thing->eflags & MF_JUMPED))
-                     P_DamageMobj(thing,NULL,NULL,1); 
-                 return false; 
-                 }
-             // SOM: End jumping damage code 
-
-
-
-          //  if (!P_BlockThingsIterator(bx,by,PIT_CheckThing)) ORIGINAL
-           //     return false; ORIGINAL
+             if (!P_BlockThingsIterator(bx,by,PIT_CheckThing))
+                return false;
     }
     // check lines
     xl = (tmbbox[BOXLEFT] - bmaporgx)>>MAPBLOCKSHIFT;
@@ -1276,7 +1261,7 @@ fixed_t P_AimLineAttack ( mobj_t*       t1,
 //added:16-02-98: Fab comments...
 //                t1       est l'attaquant (player ou monstre)
 //                angle    est l'angle de tir sur le plan x,y (orientation)
-//                distance est la port‚e maximale de la balle
+//                distance est la portï¿½e maximale de la balle
 //                slope    est la pente vers la destination (up/down)
 //                damage   est les degats infliges par la balle
 void P_LineAttack ( mobj_t*       t1,
