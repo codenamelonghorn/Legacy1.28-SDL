@@ -15,10 +15,6 @@
 #define BONUSADD        6
 
 
-//SOM: Hack
-void P_PlayerRingBurst(player_t* player);
-//END HACK
-
 // a weapon is found with two clip loads,
 // a big item has five clip loads
 int     maxammo[NUMAMMO] = {200, 50, 300, 50};
@@ -44,7 +40,7 @@ void VerifFavoritWeapon (player_t *player)
     if (player->pendingweapon != wp_nochange)
         return;
 
-    actualprior=0;
+    actualprior=-1;
 
     for (i=0; i<NUMWEAPONS; i++)
     {
@@ -360,18 +356,14 @@ void P_TouchSpecialThing ( mobj_t*       special,
     fixed_t     delta;
     int         sound;
 
-//    delta = special->z - toucher->z;
+    delta = special->z - toucher->z;
 
-//    if (delta > toucher->height
-//        || delta < -8*FRACUNIT)
-//    {
-//        // out of reach
-//        return;
-//    }
-    if(toucher->z > (special->z + special->info->height))
-      return;
-    if(special->z > (toucher->z + toucher->info->height))
-      return;
+    if (delta > toucher->height
+        || delta < -8*FRACUNIT)
+    {
+        // out of reach
+        return;
+    }
 
 
     sound = sfx_itemup;
@@ -401,8 +393,8 @@ void P_TouchSpecialThing ( mobj_t*       special,
         // bonus items
       case SPR_BON1:
         player->health++;               // can go over 100%
-        if (player->health > 9*MAXHEALTH)
-            player->health = 9*MAXHEALTH;
+        if (player->health > 2*MAXHEALTH)
+            player->health = 2*MAXHEALTH;
         player->mo->health = player->health;
         if(cv_showmessages.value==1)
             player->message = GOTHTHBONUS;
@@ -499,10 +491,12 @@ void P_TouchSpecialThing ( mobj_t*       special,
         if (!P_GiveBody (player, 25))
             return;
         if(cv_showmessages.value==1)
+        {
             if (player->health < 25)
                 player->message = GOTMEDINEED;
             else
                 player->message = GOTMEDIKIT;
+        }
         break;
 
 
@@ -913,8 +907,10 @@ void P_DeathMessages ( mobj_t*       source,
                   case MT_SHADOWS:
                     CONS_Printf(" was mauled by a Shadow Demon\n"); break;
                   case MT_HEAD:
-                    CONS_Printf(" was killed by a Ghost!\n"); break;
+                    CONS_Printf(" was fried by a Caco-demon\n"); break;
                   case MT_BRUISER:
+                      CONS_Printf(" was slain by a Baron of Hell\n"); break;
+                  case MT_UNDEAD:
                     CONS_Printf(" was smashed by a Revenant\n"); break;
                   case MT_KNIGHT:
                     CONS_Printf(" was slain by a Hell-Knight\n"); break;
@@ -1077,26 +1073,22 @@ void P_KillMobj ( mobj_t*       source,
     {
       case MT_WOLFSS:
       case MT_POSSESSED:
-        item = MT_BIRD;
+        item = MT_CLIP;
         break;
 
       case MT_SHOTGUY:
-        item = MT_SQRL;
+        item = MT_SHOTGUN;
         break;
 
-      case MT_SERGEANT:
-        item = MT_SQRL;
-        break;
-
-      case MT_TROOP:
-        item = MT_BIRD;
+      case MT_CHAINGUY:
+        item = MT_CHAINGUN;
         break;
 
       default:
         return;
     }
 
-    mo = P_SpawnMobj (target->x,target->y,target->z + (target->info->height / 2), item);
+    mo = P_SpawnMobj (target->x,target->y,ONFLOORZ, item);
     mo->flags |= MF_DROPPED;    // special versions of items
 }
 
@@ -1138,17 +1130,8 @@ boolean P_DamageMobj ( mobj_t*       target,
     }
 
     player = target->player;
-
-    //SOM: Hack to reduce the player to 1 health whenever hit.
-    if(player) {
-      if(player->mo->health > 1)
-        damage = player->mo->health - 1;
-      else
-        damage = 1;
-      }
-
-//    if (player && gameskill == sk_baby)
-//        damage >>= 1;   // take half damage in trainer mode
+    if (player && gameskill == sk_baby)
+        damage >>= 1;   // take half damage in trainer mode
 
 
     // Some close combat weapons should not
@@ -1269,8 +1252,6 @@ boolean P_DamageMobj ( mobj_t*       target,
             takedamage = true;
 
             player->damagecount += damage;  // add damage after armor / invuln
-
-            P_PlayerRingBurst(player);
 
             if (player->damagecount > 100)
                 player->damagecount = 100;  // teleport stomp does 10k points...
