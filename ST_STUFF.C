@@ -1339,10 +1339,10 @@ void ST_Init (void)
     // choose and cache the default border patch
     if (gamemode == commercial)
         // DOOM II border patch, original was GRNROCK
-        st_borderpatchnum = W_GetNumForName ("FLOOR0_3"); // Tails 10-26-99
+        st_borderpatchnum = W_GetNumForName ("GRNROCK");
     else
         // DOOM border patch.
-        st_borderpatchnum = W_GetNumForName ("FLOOR0_3"); // Tails 10-26-99
+        st_borderpatchnum = W_GetNumForName ("FLOOR7_2");
 
     scr_borderpatch = W_CacheLumpNum (st_borderpatchnum, PU_STATIC);
 
