@@ -644,8 +644,8 @@ void D_DoAdvanceDemo (void)
     {
       case 0:
         gamestate = GS_DEMOSCREEN;
-        if ( gamemode == commercial )
-            pagetic = TICRATE * 15; // Changed by Tails: 9-14-99
+            
+            pagetic = TICRATE * 11;
         else
             pagetic = 200;
         pagename = "TITLEPIC";
