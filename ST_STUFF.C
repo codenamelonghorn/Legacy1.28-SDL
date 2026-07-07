@@ -478,9 +478,6 @@ int ST_calcPainOffset(void)
 
     health = plyr->health > 100 ? 100 : plyr->health;
 
-    //SOM: Show one less ring than acutally have
-    health --;
-
     if (health != oldhealth)
     {
         lastcalc = ST_FACESTRIDE * (((100 - health) * ST_NUMPAINFACES) / 101);
