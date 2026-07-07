@@ -1078,7 +1078,7 @@ void P_PlayerInSpecialSector (player_t* player)
         if (!player->powers[pw_ironfeet])
             if (instantdamage || !(leveltime&0x1f))
             {
-                P_DamageMobj (player->mo, NULL, NULL, 200); // Tails 9-15-99
+                P_DamageMobj (player->mo, NULL, NULL, 10);
 
                 // spawn a puff of smoke
                 //CONS_Printf ("damage!\n"); //debug
@@ -1366,7 +1366,6 @@ void P_SpawnSpecials (void)
           case 8:
             // GLOWING LIGHT
             P_SpawnGlowingLight(sector);
-            sector->special = 4; // Tails 9-15-99
             break;
           case 9:
             // SECRET SECTOR
