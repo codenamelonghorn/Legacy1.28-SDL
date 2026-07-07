@@ -123,14 +123,14 @@ typedef enum
     SPR_PLAS,
     SPR_SHOT,
     SPR_SGN2,
-    SPR_GRTV, // Tails 9-30-99
+    SPR_COLU,
     SPR_SMT2,
     SPR_GOR1,
     SPR_POL2,
     SPR_POL5,
     SPR_POL4,
     SPR_POL3,
-    SPR_SHTV, // Tails 9-30-99
+    SPR_POL1,
     SPR_POL6,
     SPR_GOR2,
     SPR_GOR3,
@@ -142,11 +142,11 @@ typedef enum
     SPR_COL3,
     SPR_COL4,
     SPR_CAND,
-    SPR_BLTV, // Tails 9-30-99
+    SPR_CBRA,
     SPR_COL6,
     SPR_TRE1,
     SPR_TRE2,
-    SPR_YLTV, // Tails 9-30-99
+    SPR_ELEC,
     SPR_CEYE,
     SPR_FSKU,
     SPR_COL5,
@@ -170,8 +170,6 @@ typedef enum
     //Fab:
     SPR_SMOK,
     SPR_SPLA,
-    SPR_BIRD, // Tails 10-20-99 Birdie freed!
-    SPR_SQRL, // Tails 10-20-99 Squirrel freed!
     NUMSPRITES
 
 } spritenum_t;
@@ -332,22 +330,8 @@ typedef enum
     S_PLAY_RUN2,
     S_PLAY_RUN3,
     S_PLAY_RUN4,
-    S_PLAY_RUN5, // Tails 9-14-99
-    S_PLAY_RUN6, // Tails 9-14-99
-    S_PLAY_RUN7, // Tails 9-14-99
-    S_PLAY_RUN8, // Tails 9-14-99
     S_PLAY_ATK1,
     S_PLAY_ATK2,
-    S_PLAY_ATK3, // Tails 9-14-99
-    S_PLAY_ATK4, // Tails 9-14-99
-    S_PLAY_ATK5, // Tails 9-14-99
-    S_PLAY_ATK6, // Tails 9-14-99
-    S_PLAY_ATK7, // Tails 9-14-99
-    S_PLAY_ATK8, // Tails 9-14-99
-    S_PLAY_ATK9, // Tails 9-14-99
-    S_PLAY_ATK10, // Tails 9-14-99
-    S_PLAY_ATK11, // Tails 9-14-99
-    S_PLAY_ATK12, // Tails 9-14-99
     S_PLAY_PAIN,
     S_PLAY_PAIN2,
     S_PLAY_DIE1,
@@ -356,10 +340,16 @@ typedef enum
     S_PLAY_DIE4,
     S_PLAY_DIE5,
     S_PLAY_DIE6,
-    S_PLAY_DIE7, // Tails 9-14-99
-    S_PLAY_DIE8, // Tails 9-14-99
-    S_PLAY_DIE9, // Tails 9-14-99
-    S_PLAY_DIE10, // Tails 9-14-99
+    S_PLAY_DIE7,
+    S_PLAY_XDIE1,
+    S_PLAY_XDIE2,
+    S_PLAY_XDIE3,
+    S_PLAY_XDIE4,
+    S_PLAY_XDIE5,
+    S_PLAY_XDIE6,
+    S_PLAY_XDIE7,
+    S_PLAY_XDIE8,
+    S_PLAY_XDIE9,
     S_POSS_STND,
     S_POSS_STND2,
     S_POSS_RUN1,
@@ -380,7 +370,15 @@ typedef enum
     S_POSS_DIE3,
     S_POSS_DIE4,
     S_POSS_DIE5,
-// XDIE frames deleted Tails 10-25-99
+    S_POSS_XDIE1,
+    S_POSS_XDIE2,
+    S_POSS_XDIE3,
+    S_POSS_XDIE4,
+    S_POSS_XDIE5,
+    S_POSS_XDIE6,
+    S_POSS_XDIE7,
+    S_POSS_XDIE8,
+    S_POSS_XDIE9,
     S_POSS_RAISE1,
     S_POSS_RAISE2,
     S_POSS_RAISE3,
@@ -405,7 +403,15 @@ typedef enum
     S_SPOS_DIE3,
     S_SPOS_DIE4,
     S_SPOS_DIE5,
-// XDIE frames deleted Tails 10-25-99
+    S_SPOS_XDIE1,
+    S_SPOS_XDIE2,
+    S_SPOS_XDIE3,
+    S_SPOS_XDIE4,
+    S_SPOS_XDIE5,
+    S_SPOS_XDIE6,
+    S_SPOS_XDIE7,
+    S_SPOS_XDIE8,
+    S_SPOS_XDIE9,
     S_SPOS_RAISE1,
     S_SPOS_RAISE2,
     S_SPOS_RAISE3,
@@ -599,7 +605,12 @@ typedef enum
     S_CPOS_DIE5,
     S_CPOS_DIE6,
     S_CPOS_DIE7,
-// XDIE frames deleted Tails 10-25-99
+    S_CPOS_XDIE1,
+    S_CPOS_XDIE2,
+    S_CPOS_XDIE3,
+    S_CPOS_XDIE4,
+    S_CPOS_XDIE5,
+    S_CPOS_XDIE6,
     S_CPOS_RAISE1,
     S_CPOS_RAISE2,
     S_CPOS_RAISE3,
@@ -627,7 +638,14 @@ typedef enum
     S_TROO_DIE3,
     S_TROO_DIE4,
     S_TROO_DIE5,
-// XDIE frames deleted Tails 10-25-99
+    S_TROO_XDIE1,
+    S_TROO_XDIE2,
+    S_TROO_XDIE3,
+    S_TROO_XDIE4,
+    S_TROO_XDIE5,
+    S_TROO_XDIE6,
+    S_TROO_XDIE7,
+    S_TROO_XDIE8,
     S_TROO_RAISE1,
     S_TROO_RAISE2,
     S_TROO_RAISE3,
@@ -866,6 +884,10 @@ typedef enum
     S_PAIN_RUN4,
     S_PAIN_RUN5,
     S_PAIN_RUN6,
+    S_PAIN_ATK1,
+    S_PAIN_ATK2,
+    S_PAIN_ATK3,
+    S_PAIN_ATK4,
     S_PAIN_PAIN,
     S_PAIN_PAIN2,
     S_PAIN_DIE1,
@@ -903,7 +925,15 @@ typedef enum
     S_SSWV_DIE3,
     S_SSWV_DIE4,
     S_SSWV_DIE5,
-// XDIE frames deleted Tails 10-25-99
+    S_SSWV_XDIE1,
+    S_SSWV_XDIE2,
+    S_SSWV_XDIE3,
+    S_SSWV_XDIE4,
+    S_SSWV_XDIE5,
+    S_SSWV_XDIE6,
+    S_SSWV_XDIE7,
+    S_SSWV_XDIE8,
+    S_SSWV_XDIE9,
     S_SSWV_RAISE1,
     S_SSWV_RAISE2,
     S_SSWV_RAISE3,
@@ -968,16 +998,6 @@ typedef enum
     S_BON1C,
     S_BON1D,
     S_BON1E,
-    S_BON1F, //Tails 9-15-99
-    S_BON1G, //Tails 9-15-99
-    S_BON1H, //Tails 9-15-99
-    S_BON1I, //Tails 9-15-99
-    S_BON1J, //Tails 9-15-99
-    S_BON1K, //Tails 9-15-99
-    S_BON1L, //Tails 9-15-99
-    S_BON1M, //Tails 9-15-99
-    S_BON1N, //Tails 9-15-99
-    S_BON1O,  //Tails 9-15-99
     S_BON2,
     S_BON2A,
     S_BON2B,
@@ -997,21 +1017,7 @@ typedef enum
     S_YSKULL,
     S_YSKULL2,
     S_STIM,
-    S_STIM1, // Tails 9-30-99
-    S_STIM2, // Tails 9-30-99
-    S_STIM3, // Tails 9-30-99
-    S_STIM4, // Tails 9-30-99
-    S_STIM5, // Tails 9-30-99
-    S_STIM6, // Tails 9-30-99
-    S_STIM7, // Tails 9-30-99
     S_MEDI,
-    S_MEDI1, // Tails 9-30-99
-    S_MEDI2, // Tails 9-30-99
-    S_MEDI3, // Tails 9-30-99
-    S_MEDI4, // Tails 9-30-99
-    S_MEDI5, // Tails 9-30-99
-    S_MEDI6, // Tails 9-30-99
-    S_MEDI7, // Tails 9-30-99
     S_SOUL,
     S_SOUL2,
     S_SOUL3,
@@ -1056,14 +1062,7 @@ typedef enum
     S_PLAS,
     S_SHOT,
     S_SHOT2,
-    S_GRTV, // Tails 9-30-99
-    S_GRTV1, // Tails 9-30-99
-    S_GRTV2, // Tails 9-30-99
-    S_GRTV3, // Tails 9-30-99
-    S_GRTV4, // Tails 9-30-99
-    S_GRTV5, // Tails 9-30-99
-    S_GRTV6, // Tails 9-30-99
-    S_GRTV7, // Tails 9-30-99
+    S_COLU,
     S_STALAG,
     S_BLOODYTWITCH,
     S_BLOODYTWITCH2,
@@ -1076,14 +1075,7 @@ typedef enum
     S_HEADONASTICK,
     S_HEADCANDLES,
     S_HEADCANDLES2,
-    S_SHTV, // Tails 9-30-99
-    S_SHTV1, // Tails 9-30-99
-    S_SHTV2, // Tails 9-30-99
-    S_SHTV3, // Tails 9-30-99
-    S_SHTV4, // Tails 9-30-99
-    S_SHTV5, // Tails 9-30-99
-    S_SHTV6, // Tails 9-30-99
-    S_SHTV7, // Tails 9-30-99
+    S_DEADSTICK,
     S_LIVESTICK,
     S_LIVESTICK2,
     S_MEAT2,
@@ -1096,25 +1088,11 @@ typedef enum
     S_TALLREDCOL,
     S_SHRTREDCOL,
     S_CANDLESTIK,
-    S_BLTV, // Tails 9-30-99
-    S_BLTV1, // Tails 9-30-99
-    S_BLTV2, // Tails 9-30-99
-    S_BLTV3, // Tails 9-30-99
-    S_BLTV4, // Tails 9-30-99
-    S_BLTV5, // Tails 9-30-99
-    S_BLTV6, // Tails 9-30-99
-    S_BLTV7, // Tails 9-30-99
+    S_CANDELABRA,
     S_SKULLCOL,
     S_TORCHTREE,
     S_BIGTREE,
-    S_YLTV, // Tails 9-30-99
-    S_YLTV1, // Tails 9-30-99
-    S_YLTV2, // Tails 9-30-99
-    S_YLTV3, // Tails 9-30-99
-    S_YLTV4, // Tails 9-30-99
-    S_YLTV5, // Tails 9-30-99
-    S_YLTV6, // Tails 9-30-99
-    S_YLTV7, // Tails 9-30-99
+    S_TECHPILLAR,
     S_EVILEYE,
     S_EVILEYE2,
     S_EVILEYE3,
@@ -1165,10 +1143,6 @@ typedef enum
     S_TECH2LAMP2,
     S_TECH2LAMP3,
     S_TECH2LAMP4,
-    S_TECH2LAMP5, // Tails 9-15-99
-    S_TECH2LAMP6, // Tails 9-15-99
-    S_TECH2LAMP7, // Tails 9-15-99
-    S_TECH2LAMP8, // Tails 9-15-99
     //Fab: added lava/slime damage burn smoke
     S_SMOK1,
     S_SMOK2,
@@ -1179,12 +1153,6 @@ typedef enum
     S_SPLASH1,
     S_SPLASH2,
     S_SPLASH3,
-    S_BIRD1, // Tails 10-20-99 Birdie free!
-    S_BIRD2, // Tails 10-20-99 Birdie free!
-    S_BIRD3, // Tails 10-23-99 Birdie disappear
-    S_SQRL1, // Tails 10-20-99 Squirrel free!
-    S_SQRL2, // Tails 10-20-99 Squirrel free!
-    S_SQRL3, // Tails 10-23-99 Squirrel disappear
 
     NUMSTATES
 } statenum_t;
@@ -1203,7 +1171,7 @@ typedef struct
 } state_t;
 
 extern state_t  states[NUMSTATES];
-extern char *sprnames[NUMSPRITES];
+extern char *sprnames[NUMSPRITES+1];
 
 
 
@@ -1253,7 +1221,7 @@ typedef enum {
     MT_EXTRABFG,
     MT_MISC0,
     MT_MISC1,
-    MT_MISC2, //HEALTH POTION?
+    MT_MISC2,
     MT_MISC3,
     MT_MISC4,
     MT_MISC5,
@@ -1349,9 +1317,6 @@ typedef enum {
     MT_SPIRIT,
     MT_SMOK,        // test lave/slime damage smoke
     MT_SPLASH,      // test water splash
-    MT_FLINGRING,   //SOM: Test rings flying
-    MT_BIRD, // Tails 10-20-99 Birdie freed!
-    MT_SQRL, // Tails 10-20-99 Squirrel freed!
     NUMMOBJTYPES
 
 } mobjtype_t;
