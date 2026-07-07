@@ -48,8 +48,8 @@ boolean   fuzzymode=false;   // use original Doom fuzzy effect instead
                              // of translucency
 
 //added:03-02-98: default screen mode, as loaded/saved in config
-consvar_t   cv_scr_width  = {"scr_width","320",CV_SAVE,CV_Unsigned};
-consvar_t   cv_scr_height = {"scr_height","200",CV_SAVE,CV_Unsigned};
+consvar_t   cv_scr_width  = {"scr_width","640",CV_SAVE,CV_Unsigned};
+consvar_t   cv_scr_height = {"scr_height","400",CV_SAVE,CV_Unsigned};
 
 // =========================================================================
 //                           SCREEN VARIABLES
