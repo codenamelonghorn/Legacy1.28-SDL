@@ -151,14 +151,14 @@ void P_MovePlayer (player_t* player)
             // dirty hack to let the player avatar walk over a small wall
             // while in the air
             if (jumpover && player->mo->momz > 0)
-                P_Thrust (player->mo, player->mo->angle, 5*3072); // Changed by Tails: 9-14-99
+                P_Thrust (player->mo, player->mo->angle, 5*2048);
             else
                 if (!jumpover)
-                    P_Thrust (player->mo, player->mo->angle, cmd->forwardmove*3072); // Changed by Tails: 9-14-99
+                    P_Thrust (player->mo, player->mo->angle, cmd->forwardmove*2048);
         }
     
         if (cmd->sidemove && onground)
-            P_Thrust (player->mo, player->mo->angle-ANG90, cmd->sidemove*3072); // Changed by Tails: 9-14-99
+            P_Thrust (player->mo, player->mo->angle-ANG90, cmd->sidemove*2048);
 
         player->aiming = (signed char)cmd->aiming;
     }
@@ -169,7 +169,7 @@ void P_MovePlayer (player_t* player)
 
         if (cmd->forwardmove)
         {
-            movepushforward = cmd->forwardmove * 3072; // Changed by Tails: 9-14-99
+            movepushforward = cmd->forwardmove * 2048;
 
 
              if (player->mo->eflags & MF_UNDERWATER)
@@ -185,7 +185,7 @@ void P_MovePlayer (player_t* player)
             {
                 // allow very small movement while in air for gameplay
                 if (!onground)
-                    movepushforward >>= 2; // Proper air movement - Changed by Tails: 9-13-99
+                    movepushforward >>= 3;
             }
 
             P_Thrust (player->mo, player->mo->angle, movepushforward);
@@ -237,21 +237,17 @@ void P_MovePlayer (player_t* player)
              
         {
             if (onground)
-                player->mo->momz = JUMPGRAVITY*1.5; // Proper Jumping - Changed by Tails: 9-13-99
-                if(!(player->mo->eflags & 32)) // Tails 9-15-99 Spin Attack
-                player->mo->eflags += 32; // Tails 9-15-99 Spin Attack
-                
-        //      else //water content // Tails 9-24-99
-           //     player->mo->momz = JUMPGRAVITY*1.5; // Tails 9-24-99
+                player->mo->momz = JUMPGRAVITY;
+            else //water content
+                player->mo->momz = JUMPGRAVITY/2;
 
             //TODO: goub gloub when push up in water
             
             if ( !(player->cheats & CF_FLYAROUND) && onground && !(player->mo->eflags & MF_UNDERWATER))
             {
                 S_StartSound (player->mo, sfx_jump);
-                P_SetMobjState (player->mo, S_PLAY_ATK3); // Tails 9-24-99
                 // keep jumping ok if FLY mode.
-                player->jumpdown = true;
+                player->jumpdown |= 1;
             }
         }
     }
