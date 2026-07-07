@@ -790,10 +790,6 @@ mobj_t* P_SpawnMobj ( fixed_t       x,
         P_AddThinker (&mobj->thinker);
     }
 
-    //SOM: Fuse for bunnies, squirls, and flingrings
-      if(mobj->type == MT_BIRD || mobj->type == MT_SQRL)
-        mobj->fuse = 300 + (P_Random() % 50);
-
     return mobj;
 }
 
