@@ -190,15 +190,15 @@ void P_XYMovement (mobj_t* mo)
             //                  to jump over a small wall
             //    (normally it can not 'walk' while in air)
             // BP:1.28 no more use Cf_JUMPOVER, but i have put it for backward lmp compatibility
- //    Removed this code....not needed for SRB2-- Tails 10-24-99
- //           if (mo->player)
- //           {
- //               if (tmfloorz - mo->z > MAXSTEPMOVE)
- //                   if (mo->momz > 0)
- //                       mo->player->cheats |= CF_JUMPOVER;
- //                   else
- //                       mo->player->cheats &= ~CF_JUMPOVER;
- //          }
+
+            if (mo->player)
+            {
+                if (tmfloorz - mo->z > MAXSTEPMOVE)
+                    if (mo->momz > 0)
+                        mo->player->cheats |= CF_JUMPOVER;
+                    else
+                        mo->player->cheats &= ~CF_JUMPOVER;
+           }
 
             //added:26-02-98: slidemove also for ChaseCam
             // note : the SPIRIT have a valide player field
@@ -368,17 +368,8 @@ void P_ZMovement (mobj_t* mo)
             }
 
             // set it once and not continuously
-            // if (mo->z < mo->floorz)        ORIGINAL
-            // mo->eflags |= MF_JUSTHITFLOOR; ORIGINAL
-            //SOM: It must be <= not just <
-            if (mo->z <= mo->floorz) // Tails 9-15-99 Spin Attack
-            {
-            mo->eflags |= MF_JUSTHITFLOOR; // Tails 9-15-99 Spin Attack
-            if(mo->eflags & MF_JUMPED) // Tails 9-15-99 Spin Attack
-            mo->eflags -= MF_JUMPED; // Tails 9-15-99 Spin Attack
-            
-            }
-
+            if (mo->z < mo->floorz)
+            mo->eflags |= MF_JUSTHITFLOOR;
 
             mo->momz = 0;
         }
@@ -454,7 +445,7 @@ void P_ZMovement (mobj_t* mo)
         ((mo->eflags & MF_TOUCHWATER) || (mo->eflags & MF_UNDERWATER)) && 
         !(mo->flags & (MF_MISSILE | MF_SKULLFLY)))
     {
-         mo->momz = FixedMul (mo->momz, FRICTION*1.02); // Tails 9-24-99
+         mo->momz = FixedMul (mo->momz, FRICTION*3/4);
     }
 
 }

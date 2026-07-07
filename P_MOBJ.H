@@ -222,8 +222,6 @@ typedef enum
     MF_UNDERWATER        = 8,
     // Set by P_MovePlayer() to disable gravity add in P_MobjThinker() ( for gameplay )
     MF_SWIMMING          = 16,
-    // Jumping Status... Added by Tails 9-15-99 Spin Attack
-    MF_JUMPED            = 32
 
 } mobjeflag_t;
 
