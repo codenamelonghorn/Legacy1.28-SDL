@@ -228,6 +228,7 @@
     <ClInclude Include="W_wad.h" />
     <ClInclude Include="Wi_stuff.h" />
     <ClInclude Include="Z_zone.h" />
+    <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="_logs\log.txt">
@@ -242,5 +243,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="win32\valve.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="fabdoom.rc" />
   </ItemGroup>
 </Project>

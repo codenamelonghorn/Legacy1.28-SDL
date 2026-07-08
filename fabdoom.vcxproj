@@ -305,6 +305,7 @@
     <ClInclude Include="P_setup.h" />
     <ClInclude Include="P_spec.h" />
     <ClInclude Include="P_tick.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="R_bsp.h" />
     <ClInclude Include="R_data.h" />
     <ClInclude Include="R_defs.h" />
@@ -342,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="win32\valve.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="fabdoom.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
