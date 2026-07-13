@@ -260,7 +260,7 @@ char *text[] = {
    "Degreelessness Mode On",
    "Degreelessness Mode Off",
 
-   "Gun Cheat Added",
+   "Very Happy Ammo Added",
    "Ammo (no keys) Added",
 
    "No Clipping Mode ON",

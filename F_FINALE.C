@@ -394,7 +394,7 @@ void F_CastTicker (void)
           case S_CYBER_ATK2:
           case S_CYBER_ATK4:
           case S_CYBER_ATK6:    sfx = sfx_rlaunc; break;
-          case S_PAIN_DIE1:     sfx = sfx_sklatk; break;
+          case S_PAIN_ATK3:     sfx = sfx_sklatk; break;
           default: sfx = 0; break;
         }
 

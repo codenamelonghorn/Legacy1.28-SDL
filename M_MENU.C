@@ -1411,7 +1411,7 @@ static modedesc_t   modedescs[MAXMODEDESCS];
 
 
 //
-// Draw the video modes list, �-la-Quake
+// Draw the video modes list, a-la-Quake
 //
 void M_DrawVideoMode(void)
 {
@@ -2123,7 +2123,7 @@ void M_DrawTextBox (int x, int y, int width, int lines)
         //cy += 8;
         //V_DrawScaledPatch (cx, cy, 0, p);
 
-        //p = W_CachePatchName ("brdr_mm",PU_CACHE); //middle ombr� dessus
+        //p = W_CachePatchName ("brdr_mm",PU_CACHE); //middle ombr‚ dessus
         //for (n = 1; n < lines; n++)
         //{
         //    cy += 8;
