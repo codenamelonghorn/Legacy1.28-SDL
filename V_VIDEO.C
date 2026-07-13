@@ -268,7 +268,6 @@ void V_DrawScaledPatch ( int           x,
     int         ofs;
     int         colfrac,rowfrac;
 
-
     dupx = vid.dupx;
     dupy = vid.dupy;
 
@@ -329,8 +328,6 @@ void V_DrawScaledPatchFlipped ( int           x,
     int         dupx,dupy;
     int         ofs;
     int         colfrac,rowfrac;
-
-
 
     dupx = vid.dupx;
     dupy = vid.dupy;
@@ -399,8 +396,6 @@ void V_DrawTranslucentPatch ( int           x,
     int         ofs;
     int         colfrac,rowfrac;
 
-
-
     dupx = vid.dupx;
     dupy = vid.dupy;
 
@@ -465,7 +460,6 @@ void V_DrawTranslationPatch ( int           x,
     byte*       dest;
     byte*       source;
     int         w;
-
 
     y -= SHORT(patch->topoffset);
     x -= SHORT(patch->leftoffset);
@@ -598,7 +592,6 @@ V_DrawPatchFlipped
     byte*       dest;
     byte*       source;
     int         w;
-
 
     y -= SHORT(patch->topoffset);
     x -= SHORT(patch->leftoffset);
@@ -922,7 +915,7 @@ void V_DrawFadeScreen (void)
     byte        p1, p2, p3, p4;
     byte*       fadetable = (byte *) colormaps + 16*256;
     //short*    wput;
-
+    
     //if (scr_bpp==1)
     //{
 
